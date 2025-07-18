@@ -11,9 +11,9 @@ Rscript cnv_bin_gwas_analysis.r \
     --out Result_Bin_1Mb_del.txt \
     --threads 50
 ```
-The file <I>hg19_chromosome_length.txt</I> contains the length information of each chromosome. <br>
-By setting <I>--binsez</I>, chromosomes can be divided into bins of different sizes. <br>
-This script supports multi-threading. You can accelerate its execution by setting the <I>--threads</I> parameter. <br>
+The file `hg19_chromosome_length.txt` contains the length information of each chromosome. <br>
+By setting `--binsez`, chromosomes can be divided into bins of different sizes. <br>
+This script supports multi-threading. You can accelerate its execution by setting the `--threads` parameter. <br>
   
 ### 2. bin_region_annotation.r
 This script is used for annotating CNVs, including annotating CNVs to cytobands as well as genes. <br>
@@ -25,4 +25,4 @@ Rscript bin_region_annotation.r \
     --out Bin_1Mb_del_ranges.txt \
     --cyto cytoBand.txt
 ```
-The <I>annotation_proteincoding.txt</I> is a gene annotation file that contains the location information of genes. <br>
+The `annotation_proteincoding.txt` file is a gene annotation file that contains the genomic locations of protein-coding genes. If you wish to annotate non-coding RNAs, you can create a custom annotation file following the same format. <br>
